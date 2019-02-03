@@ -169,3 +169,23 @@ def test_authors_before_examples():
             line += "`{}` is defined early in module `{}`\n".format(*error)
         print(line[:-1])
         assert False
+
+
+# def test_format_placeholders():
+#     comment = "ormat placeholders:"
+#     comment2 = "ontrl placeholders:"
+#     skip_files = ["__init__.py"]
+#     errors = []
+#
+#     for _file in sorted(os.listdir(MODULE_PATH)):
+#         if _file.endswith(".py") and _file not in skip_files:
+#             with open(os.path.join(MODULE_PATH, _file)) as f:
+#                 if comment not in f.read():
+#                     if comment2 not in f.read():
+#                         errors.append((comment, _file))
+#     if errors:
+#         line = "Missing `{}` error(s) detected!\n\n".format(comment)
+#         for error in errors:
+#             line += "`{}` is not in module `{}`\n".format(*error)
+#         print(line[:-1])
+#         assert False
